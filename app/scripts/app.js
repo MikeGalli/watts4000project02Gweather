@@ -19,7 +19,7 @@ angular
     'ngSanitize',
     'ngTouch'
   ])
-  .config(function ($routeProvider) {
+  .config(function($routeProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
@@ -30,6 +30,11 @@ angular
         templateUrl: 'views/about.html',
         controller: 'AboutCtrl',
         controllerAs: 'about'
+      })
+      .when('/current/:cityID', {
+        templateUrl: 'views/current.html',
+        controller: 'CurrentCtrl',
+        controllerAs: 'current'
       })
       .otherwise({
         redirectTo: '/'

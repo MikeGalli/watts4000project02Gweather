@@ -1,1 +1,10 @@
 <p>This is the about view.</p>
+
+<!--ng-init: inititlizes app data-->
+<div ng-app ng-init="firstnum=1;secondnum=2">     <!--ng-app: inside this div there will be an Angular app-->
+<input type="number" min="0" ng-model="firstnum"> <!--ng-model defines new variables  -->
+plus
+<input type="number" min="0" ng-model="secondnum">
+equals
+<b>{{firstnum + secondnum}}</b>
+</div>
